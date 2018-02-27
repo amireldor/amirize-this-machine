@@ -32,6 +32,17 @@
     name: "{{ lookup('env', 'USER') }}"
     shell: "{{ which_zsh.stdout }}"
 
+- name: Install oh-my-zsh
+  git:
+    dest: ~/.oh-my-zsh
+    repo: git://github.com/robbyrussell/oh-my-zsh.git
+    depth: 1
+
+- name: Copy zshrc
+  copy:
+    src: zshrc
+    dest: ~/.zshrc
+
 - name: Install n - node version manager
   become: true
   npm:
