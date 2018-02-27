@@ -9,3 +9,7 @@ apt_packages:
   - gnome-tweak-tool
   - trash-cli
   - meld
+
+dot_files:
+  - zshrc
+  - bash_aliases

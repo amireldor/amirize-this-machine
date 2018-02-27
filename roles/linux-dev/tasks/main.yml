@@ -38,10 +38,13 @@
     repo: git://github.com/robbyrussell/oh-my-zsh.git
     depth: 1
 
-- name: Copy zshrc
-  copy:
-    src: zshrc
-    dest: ~/.zshrc
+- name: Symlink dot files
+  file:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "~/.{{ item }}"
+    state: link
+    force: yes
+  with_items: "{{ dot_files }}"
 
 - name: Install n - node version manager
   become: true
