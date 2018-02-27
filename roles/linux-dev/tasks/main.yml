@@ -1,9 +1,4 @@
 ---
-- name: Making a funny text file on the desktop
-  copy:
-    dest: "/home/amir/Desktop/jesus message.txt"
-    content: "Jesus engulfs you"
-
 - name: Installing your favorite packages
   become: true
   apt:
@@ -45,6 +40,21 @@
     state: link
     force: yes
   with_items: "{{ dot_files }}"
+
+- name: Ensure strange dot files destination folders exist
+  file:
+    path: "{{ item.dest }}"
+    state: directory
+    force: yes
+  with_items: "{{ strange_dot_files }}"
+
+- name: Symlink strange dot files
+  file:
+    src: "{{ role_path }}/files/{{ item.name }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+  with_items: "{{ strange_dot_files }}"
 
 - name: Install n - node version manager
   become: true

@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # Install ansible to a (discardable) virtualenv and run the main playbook
 

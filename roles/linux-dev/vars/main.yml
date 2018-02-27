@@ -13,3 +13,7 @@ apt_packages:
 dot_files:
   - zshrc
   - bash_aliases
+
+strange_dot_files:
+  - name: init.vim
+    dest: "$HOME/.config/nvim/init.vim"
