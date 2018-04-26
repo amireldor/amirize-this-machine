@@ -43,7 +43,7 @@
 
 - name: Ensure strange dot files destination folders exist
   file:
-    path: "{{ item.dest }}"
+    path: "{{ item.dest_dir }}"
     state: directory
     force: yes
   with_items: "{{ strange_dot_files }}"
@@ -51,7 +51,7 @@
 - name: Symlink strange dot files
   file:
     src: "{{ role_path }}/files/{{ item.name }}"
-    dest: "{{ item.dest }}"
+    dest: "{{ item.dest_dir }}/{{ item.name }}"
     state: link
     force: yes
   with_items: "{{ strange_dot_files }}"

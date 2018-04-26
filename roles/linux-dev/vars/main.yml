@@ -16,4 +16,4 @@ dot_files:
 
 strange_dot_files:
   - name: init.vim
-    dest: "$HOME/.config/nvim/init.vim"
+    dest_dir: "$HOME/.config/nvim"
