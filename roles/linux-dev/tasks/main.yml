@@ -33,36 +33,7 @@
     repo: git://github.com/robbyrussell/oh-my-zsh.git
     depth: 1
 
-- name: Symlink dot files
-  file:
-    src: "{{ role_path }}/files/{{ item }}"
-    dest: "~/.{{ item }}"
-    state: link
-    force: yes
-  with_items: "{{ dot_files }}"
-
-- name: Ensure strange dot files destination folders exist
-  file:
-    path: "{{ item.dest | dirname }}"
-    state: directory
-    force: yes
-  with_items: "{{ custom_path_dot_files }}"
-
-- name: Symlink strange dot files
-  file:
-    src: "{{ role_path }}/files/{{ item.name }}"
-    dest: "{{ item.dest }}"
-    state: link
-    force: yes
-  with_items: "{{ custom_path_dot_files }}"
-
-- name: Symlink additional folders
-  file:
-    src: "{{ role_path }}/files/{{ item.name }}"
-    dest: "{{ item.dest }}"
-    state: link
-    force: yes
-  with_items: "{{ folders_to_symlink }}"
+- include_tasks: dotfiles.yml
 
 - name: Install n - node version manager
   become: true
