@@ -14,6 +14,10 @@ dot_files:
   - zshrc
   - bash_aliases
 
-strange_dot_files:
+custom_path_dot_files:
   - name: init.vim
     dest_dir: "$HOME/.config/nvim"
+
+folders_to_symlink:
+  - name: amir.vim
+    dest: "$HOME/.config/nvim/amir"

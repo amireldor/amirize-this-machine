@@ -46,7 +46,7 @@
     path: "{{ item.dest_dir }}"
     state: directory
     force: yes
-  with_items: "{{ strange_dot_files }}"
+  with_items: "{{ custom_path_dot_files }}"
 
 - name: Symlink strange dot files
   file:
@@ -54,7 +54,15 @@
     dest: "{{ item.dest_dir }}/{{ item.name }}"
     state: link
     force: yes
-  with_items: "{{ strange_dot_files }}"
+  with_items: "{{ custom_path_dot_files }}"
+
+- name: Symlink additional folders
+  file:
+    src: "{{ role_path }}/files/{{ item.name }}"
+    dest: "{{ item.dest }}"
+    state: link
+    force: yes
+  with_items: "{{ folders_to_symlink }}"
 
 - name: Install n - node version manager
   become: true
