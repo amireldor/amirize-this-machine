@@ -17,35 +17,6 @@
     generate_ssh_key: yes
   when: ssh_key_file.stat.exists == False
 
-- name: Save zsh path
-  register: which_zsh
-  shell: "which zsh"
-
-- name: Set zsh as user's shell
-  become: true
-  user:
-    name: "{{ lookup('env', 'USER') }}"
-    shell: "{{ which_zsh.stdout }}"
-
-- name: Install oh-my-zsh
-  git:
-    dest: ~/.oh-my-zsh
-    repo: git://github.com/robbyrussell/oh-my-zsh.git
-    depth: 1
-
+- include_tasks: zsh.yml
 - include_tasks: dotfiles.yml
-
-- name: Install n - node version manager
-  become: true
-  npm:
-    name: n
-    global: yes
-    state: latest
-
-- name: Install latest node using n
-  become: true
-  shell: "n latest"
-
-- name: Install stable node using n
-  become: true
-  shell: "n stable"
+- include_tasks: node.yml
