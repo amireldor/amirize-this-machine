@@ -16,7 +16,7 @@ dot_files:
 
 custom_path_dot_files:
   - name: init.vim
-    dest_dir: "$HOME/.config/nvim"
+    dest: "$HOME/.config/nvim/init.vim"
 
 folders_to_symlink:
   - name: amir.vim
