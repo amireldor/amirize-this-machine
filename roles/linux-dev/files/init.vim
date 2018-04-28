@@ -1,3 +1,3 @@
 colors blue
 
-runtime! amir/keys.vim
+runtime! amir/main.vim

@@ -9,6 +9,7 @@ apt_packages:
   - gnome-tweak-tool
   - trash-cli
   - meld
+  - python-virtualenv
 
 dot_files:
   - zshrc
@@ -17,7 +18,12 @@ dot_files:
 custom_path_dot_files:
   - name: init.vim
     dest: "$HOME/.config/nvim/init.vim"
+  - name: plug.vim
+    dest: "$HOME/.local/share/nvim/site/autoload/plug.vim"
 
 folders_to_symlink:
   - name: amir.vim
     dest: "$HOME/.config/nvim/amir"
+
+neovim_python2_venv: "$HOME/.virtualenvs/neovim2"
+neovim_python3_venv: "$HOME/.virtualenvs/neovim3"

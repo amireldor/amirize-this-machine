@@ -2,7 +2,9 @@
 - name: Installing your favorite packages
   become: true
   apt:
+    install_recommends: no
     update_cache: yes
+    cache_valid_time: 3600
     name: "{{ item }}"
     state: latest
   with_items: "{{ apt_packages }}"
@@ -20,3 +22,4 @@
 - include_tasks: zsh.yml
 - include_tasks: dotfiles.yml
 - include_tasks: node.yml
+- include_tasks: neovim.yml
