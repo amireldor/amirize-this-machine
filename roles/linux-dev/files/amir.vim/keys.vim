@@ -6,8 +6,8 @@ nnoremap <Space> <Nop>
 let mapleader = " "
 
 map s <Plug>(easymotion-prefix)
-map <Leader>a <Plug>(easymotion-b)
-map <Leader>s <Plug>(easymotion-w)
+" map <Leader>a <Plug>(easymotion-b)
+" map <Leader>s <Plug>(easymotion-w)
 let g:EasyMotion_do_mapping = 1
 let g:EasyMotion_smartcase = 1
 
