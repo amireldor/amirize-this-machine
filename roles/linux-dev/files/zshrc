@@ -97,3 +97,4 @@ export EDITOR='nvim'
 
 source "$HOME/.bash_aliases"
 
+export PATH=~/.npm-packages/bin:$PATH
