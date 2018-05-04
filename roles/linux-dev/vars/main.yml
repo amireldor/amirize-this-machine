@@ -14,6 +14,7 @@ apt_packages:
 dot_files:
   - zshrc
   - bash_aliases
+  - npmrc
 
 custom_path_dot_files:
   - name: init.vim
@@ -27,3 +28,6 @@ folders_to_symlink:
 
 neovim_python2_venv: "$HOME/.virtualenvs/neovim2"
 neovim_python3_venv: "$HOME/.virtualenvs/neovim3"
+
+global_npm_packages:
+  - yarn

@@ -13,3 +13,10 @@
 - name: Install stable node using n
   become: true
   shell: "n stable"
+
+- name: Global npm packages
+  npm:
+    name: "{{ item }}"
+    global: yes
+    state: latest
+  with_items: "{{ global_npm_packages }}"
