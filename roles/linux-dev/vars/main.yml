@@ -10,6 +10,7 @@ apt_packages:
   - trash-cli
   - meld
   - python-virtualenv
+  - thefuck
 
 dot_files:
   - zshrc
