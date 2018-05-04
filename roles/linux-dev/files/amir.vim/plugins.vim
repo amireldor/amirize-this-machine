@@ -1,11 +1,15 @@
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sleuth'
 Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-commentary'
+Plug 'mattn/emmet-vim'
+Plug 'miconda/lucariox.vim'
+Plug 'nightsense/seagrey'
+Plug 'scrooloose/nerdtree'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/dante.vim'
 call plug#end()
 
 " clojure python
