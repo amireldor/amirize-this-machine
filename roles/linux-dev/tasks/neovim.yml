@@ -11,5 +11,5 @@
     virtualenv_python: python3.6
     name: neovim
 
-- name: Run PlugInstall
-  shell: "nvim + 'PlugInstall --sync' +qa"
+- name: Install plugins and update remote plugins
+  shell: "nvim + 'PlugInstall --sync' +UpdateRemotePlugins +qa"
