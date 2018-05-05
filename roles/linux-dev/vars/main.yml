@@ -11,6 +11,7 @@ apt_packages:
   - meld
   - python-virtualenv
   - thefuck
+  - tmux
 
 dot_files:
   - zshrc
