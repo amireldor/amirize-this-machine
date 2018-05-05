@@ -21,7 +21,7 @@ dot_files:
 custom_path_dot_files:
   - name: init.vim
     dest: "$HOME/.config/nvim/init.vim"
-  - name: Astro custom zsh theme
+  - name: astro.zsh-theme
     dest: "$HOME/.oh-my-zsh/themes/astro.zsh-theme"
   - name: plug.vim
     dest: "$HOME/.local/share/nvim/site/autoload/plug.vim"
