@@ -14,3 +14,5 @@ let g:EasyMotion_smartcase = 1
 map <Leader>c gcc
 
 map <Leader><Leader> :Denite buffer file_rec<CR>
+nmap <C-f> :Denite buffer file_rec<CR>
+
