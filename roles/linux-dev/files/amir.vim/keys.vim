@@ -16,3 +16,4 @@ map <Leader>c gcc
 map <Leader><Leader> :Denite buffer file_rec<CR>
 nmap <C-f> :Denite buffer file_rec<CR>
 
+tnoremap <Esc> <C-\><C-n>
