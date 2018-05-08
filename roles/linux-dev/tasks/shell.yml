@@ -1,0 +1,12 @@
+# more shell extensions/utils
+
+---
+- name: Install fzf from git (fuzzy search)
+  git:
+    dest: ~/.fzf
+    repo: https://github.com/junegunn/fzf.git
+    depth: 1
+
+- name: Run fzf install script
+  shell: "{{ lookup('env', 'HOME') }}/.fzf/install"
+

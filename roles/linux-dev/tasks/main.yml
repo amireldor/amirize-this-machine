@@ -20,6 +20,8 @@
   when: ssh_key_file.stat.exists == False
 
 - include_tasks: zsh.yml
+- include_tasks: shell.yml
 - include_tasks: dotfiles.yml
 - include_tasks: node.yml
 - include_tasks: neovim.yml
+

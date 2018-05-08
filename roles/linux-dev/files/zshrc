@@ -102,3 +102,5 @@ source "$HOME/.bash_aliases"
 export PATH=~/.npm-packages/bin:$PATH
 
 eval $(thefuck --alias)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
