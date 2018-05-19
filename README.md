@@ -1,4 +1,4 @@
- - work in progress -
+ work in progress
 
 This automates installation and configuration of a linux machine to my liking.
 Much like everyone's dotfiles or my previous project called 'amir-taninfiles'.
