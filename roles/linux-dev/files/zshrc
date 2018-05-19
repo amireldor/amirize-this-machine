@@ -63,6 +63,9 @@ plugins=(
   z
   thefuck
   history-substring-search
+  python
+  pyenv
+  pylint
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,9 +101,14 @@ export EDITOR='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source "$HOME/.bash_aliases"
+source "$HOME/.bash_profile"
 
-export PATH=~/.npm-packages/bin:$PATH
+export PATH="$HOME/.npm-packages/bin:$PATH"
 
 eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+

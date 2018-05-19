@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'digitaltoad/vim-pug'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'HerringtonDarkholme/yats.vim'
@@ -8,6 +9,7 @@ Plug 'mattn/emmet-vim'
 Plug 'miconda/lucariox.vim'
 Plug 'nightsense/seagrey'
 Plug 'posva/vim-vue'
+Plug 'ryym/vim-riot'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

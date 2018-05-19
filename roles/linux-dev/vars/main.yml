@@ -1,7 +1,6 @@
 ---
 apt_packages:
   - git
-  - neovim
   - build-essential
   - zsh
   - tree
@@ -17,6 +16,7 @@ dot_files:
   - zshrc
   - bash_aliases
   - npmrc
+  - tmux.conf
 
 custom_path_dot_files:
   - name: init.vim
