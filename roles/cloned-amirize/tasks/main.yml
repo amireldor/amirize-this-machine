@@ -12,6 +12,7 @@
   stat: path="{{ ansible_env.HOME }}/.ssh/id_rsa"
 
 - name: Generate SSH key
+  become: true
   user:
     name: "{{ ansible_env.USER }}"
     generate_ssh_key: yes
