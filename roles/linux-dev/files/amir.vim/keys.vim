@@ -2,8 +2,9 @@ let mapleader = " "
 
 map <F3> :NERDTreeToggle<CR>
 map <F5> :e ~/.config/nvim/init.vim<CR>:cd %:h<CR>
-map <Leader>d :cd %:h<CR>:pwd<CR>
 
+map <Leader>d :cd %:h<CR>:pwd<CR>
+map <Leader>s :w<CR>
 map <Leader>3 :NERDTreeToggle<CR>
 map <Leader>5 :e ~/.config/nvim/init.vim<CR>:cd %:h<CR>
 
