@@ -11,6 +11,8 @@ apt_packages:
   - python-virtualenv
   - thefuck
   - tmux
+  - curl
+  - silversearcher-ag
 
 dot_files:
   - zshrc
