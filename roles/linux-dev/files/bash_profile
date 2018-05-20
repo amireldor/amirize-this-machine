@@ -1,0 +1,5 @@
+export PATH="$HOME/bin:$PATH"
+source /usr/local/bin/virtualenvwrapper.sh
+
+
+_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
