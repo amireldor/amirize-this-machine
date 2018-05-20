@@ -18,6 +18,7 @@ dot_files:
   - npmrc
   - tmux.conf
   - bash_profile
+  - gitconfig
 
 custom_path_dot_files:
   - name: init.vim

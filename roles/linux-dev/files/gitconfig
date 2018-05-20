@@ -1,0 +1,15 @@
+[user]
+	email = "amir@eize.ninja"
+	name = "Amir Eldor"
+
+[alias]
+	c = commit
+	d = diff
+	a = add
+	co = checkout
+	s = status
+	dc = diff --cached
+	l = log
+
+[push]
+	default = simple
