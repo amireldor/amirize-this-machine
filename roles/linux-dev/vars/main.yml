@@ -35,3 +35,5 @@ neovim_python3_venv: "$HOME/.virtualenvs/neovim3"
 
 global_npm_packages:
   - yarn
+
+local_amirize_repo: "{{ ansible_env.HOME }}/.amirize-this-machine"

@@ -6,12 +6,12 @@
 - name: Set zsh as user's shell
   become: true
   user:
-    name: "{{ lookup('env', 'USER') }}"
+    name: "{{ ansible_env.USER }}"
     shell: "{{ which_zsh.stdout }}"
 
 - name: Install oh-my-zsh
   git:
-    dest: ~/.oh-my-zsh
-    repo: git://github.com/robbyrussell/oh-my-zsh.git
+    dest: "~/.oh-my-zsh"
+    repo: "git://github.com/robbyrussell/oh-my-zsh.git"
     depth: 1
 

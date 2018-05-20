@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install ansible to a (discardable) virtualenv and run the main playbook
-
+set -e
 export ANSIBLE_VENV="temp_ansible_venv"
 
 sudo apt install python3-venv
@@ -14,7 +14,14 @@ fi
 
 echo "good! Will now activate venv and run the ansible playbook"
 
+echo "running preparations..."
+
 source "$ANSIBLE_VENV/bin/activate"
 pip install ansible
 
-./_run_playbook.sh
+echo "phase 1 - preparing local repo"
+./_playbook_phase_1.sh
+
+echo "phase 2 - continue running playbook from locally cloned repo"
+cd $HOME/.amirize-this-machine
+./_playbook_phase_2.sh

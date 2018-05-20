@@ -8,5 +8,5 @@
     depth: 1
 
 - name: Run fzf install script
-  shell: "{{ lookup('env', 'HOME') }}/.fzf/install"
+  shell: "{{ ansible_env.HOME }}/.fzf/install"
 

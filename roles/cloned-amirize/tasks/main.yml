@@ -1,0 +1,26 @@
+---
+- name: Ensure git
+  become: true
+  apt:
+    install_recommends: no
+    update_cache: yes
+    name: "git"
+    state: latest
+
+- name: Check SSH key existence
+  register: ssh_key_file
+  stat: path="{{ ansible_env.HOME }}/.ssh/id_rsa"
+
+- name: Generate SSH key
+  user:
+    name: "{{ ansible_env.USER }}"
+    generate_ssh_key: yes
+  when: ssh_key_file.stat.exists == False
+
+- pause: prompt="It's time to new SSH key to your GitHub account..."
+
+- name: Clone this amirize repository locally
+  git:
+    dest: "~/.amirize-this-machine"
+    repo: "git@github.com:amireldor/amirize-this-machine.git"
+

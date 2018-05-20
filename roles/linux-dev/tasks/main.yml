@@ -9,16 +9,6 @@
     state: latest
   with_items: "{{ apt_packages }}"
 
-- name: Check SSH key existence
-  register: ssh_key_file
-  stat: path="{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
-
-- name: Generate SSH key
-  user:
-    name: "{{ lookup('env', 'USER') }}"
-    generate_ssh_key: yes
-  when: ssh_key_file.stat.exists == False
-
 - include_tasks: zsh.yml
 - include_tasks: shell.yml
 - include_tasks: dotfiles.yml
