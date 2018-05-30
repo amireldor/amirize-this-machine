@@ -2,3 +2,4 @@
 alias p='pwd'
 alias t='tree -L 2 -I node_modules'
 alias by='byobu'
+alias amiri='cd ~/.amirize-this-machine'

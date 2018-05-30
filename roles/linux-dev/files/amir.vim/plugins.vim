@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'BurningEther/iron.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'digitaltoad/vim-pug'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
@@ -7,6 +8,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'miconda/lucariox.vim'
+Plug 'mxw/vim-jsx'
 Plug 'nightsense/seagrey'
 Plug 'posva/vim-vue'
 Plug 'ryym/vim-riot'
