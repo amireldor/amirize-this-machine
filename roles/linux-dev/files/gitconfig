@@ -10,6 +10,10 @@
 	s = status
 	dc = diff --cached
 	l = log
+	fl = flow
 
 [push]
 	default = simple
+
+[core]
+	excludesfile = ~/.gitignore

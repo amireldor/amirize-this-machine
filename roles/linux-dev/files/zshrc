@@ -60,12 +60,14 @@ ZSH_THEME="astro"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  git-flow
   z
   thefuck
   history-substring-search
   python
   pyenv
   pylint
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
