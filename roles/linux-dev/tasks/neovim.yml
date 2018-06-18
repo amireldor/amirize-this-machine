@@ -1,14 +1,18 @@
 ---
+- name: Install virtualenv in the... Ansible virtualenv
+  pip:
+    name: virtualenv
+
 - name: Install python-neovim in a Python 2 virtualenv
   pip:
     virtualenv: "{{ neovim_python2_venv }}"
-    virtualenv_python: python2.7
+    virtualenv_python: python2
     name: neovim
 
 - name: Install python-neovim in a Python 3 virtualenv
   pip:
     virtualenv: "{{ neovim_python3_venv }}"
-    virtualenv_python: python3.6
+    virtualenv_python: python3
     name: neovim
 
 - name: Install plugins and update remote plugins
