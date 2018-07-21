@@ -1,7 +1,7 @@
 let mapleader = " "
 
 map <F3> :NERDTreeToggle<CR>
-map <F5> :e ~/.config/nvim/init.vim<CR>:cd %:h<CR>
+map <F5> :tabnew<CR>:tcd ~/.config/nvim<CR>:e init.vim<CR>
 
 map <Leader>d :cd %:h<CR>:pwd<CR>
 map <Leader>w :w<CR>
