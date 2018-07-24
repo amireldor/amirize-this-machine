@@ -20,6 +20,9 @@
 
 - pause: prompt="It's time to new SSH key to your GitHub account..."
 
+- name: Scan GitHub SSH host
+  shell: "ssh-keyscan github.com > ~/.ssh/known_hosts"
+
 - name: Clone this amirize repository locally
   git:
     dest: "~/.amirize-this-machine"
