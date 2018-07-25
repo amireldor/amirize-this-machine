@@ -1,34 +1,34 @@
 ---
-- name: Ensure user ~/bin folder
+- name: Ensure user personal bin folder
   file:
-    path: "{{ ansible_env.HOME }}/bin"
+    path: "{{ personal_bin_folder }}"
     state: directory
     force: yes
 
 - name: Download nightly nvim.appimage
   get_url:
-    url: "https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage"
-    dest: "{{ ansible_env.HOME }}/bin/nvim"
+    url: "{{ nvim_appimage_url }}"
+    dest: "{{ personal_bin_folder }}/nvim"
     mode: u+rwx
 
 - name: Install python2 neovim on a virtualenv
   pip:
     virtualenv_python: python2.7
-    virtualenv: "{{ ansible_env.HOME }}/.virtualenvs/neovim-py2"
+    virtualenv: "{{ python2_host_venv_path }}"
     name: "neovim"
     state: latest
 
 - name: Install python3 neovim on a virtualenv
   pip:
     virtualenv_python: python3
-    virtualenv: "{{ ansible_env.HOME }}/.virtualenvs/neovim-py3"
+    virtualenv: "{{ python3_host_venv_path }}"
     name: "neovim"
     state: latest
 
 - name: Symlink configuration files
   file:
     src: "{{ role_path }}/files/{{ item }}"
-    dest: "~/.config/nvim/{{ item }}"
+    dest: "{{ neovim_config_folder }}"
     state: link
     force: yes
   with_items:
