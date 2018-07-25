@@ -33,7 +33,7 @@
     force: yes
   with_items:
     - "init.vim"
-    - "plug.vim"
+    - "autoload"
     - "amir"
 
 - name: Run nvim installation things
