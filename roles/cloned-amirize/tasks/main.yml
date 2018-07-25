@@ -21,8 +21,15 @@
 - name: Scan GitHub SSH host
   shell: "ssh-keyscan github.com > ~/.ssh/known_hosts"
 
+- name: Check if amirize repository already exists at standard location
+  stat:
+    path: "~/.amirize-this-machine"
+  register: amirize_repo
+
 - name: Clone this amirize repository locally
   git:
     dest: "~/.amirize-this-machine"
     repo: "git@github.com:amireldor/amirize-this-machine.git"
+  when: not amirize_repo.stat.exists
+
 
