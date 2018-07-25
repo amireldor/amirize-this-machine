@@ -1,6 +1,7 @@
 ---
 apt_packages:
   - git
+  - tig
   - build-essential
   - zsh
   - tree
@@ -23,21 +24,9 @@ dot_files:
   - gitconfig
 
 custom_path_dot_files:
-  - name: init.vim
-    dest: "$HOME/.config/nvim/init.vim"
   - name: astro.zsh-theme
     dest: "$HOME/.oh-my-zsh/themes/astro.zsh-theme"
-  - name: plug.vim
-    dest: "$HOME/.local/share/nvim/site/autoload/plug.vim"
-
-folders_to_symlink:
-  - name: amir.vim
-    dest: "$HOME/.config/nvim/amir"
-
-neovim_python2_venv: "$HOME/.virtualenvs/neovim2"
-neovim_python3_venv: "$HOME/.virtualenvs/neovim3"
 
 global_npm_packages:
   - yarn
 
-local_amirize_repo: "{{ ansible_env.HOME }}/.amirize-this-machine"
