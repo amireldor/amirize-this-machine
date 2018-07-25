@@ -1,21 +1,28 @@
 ---
-- name: Ensure we got build tools (CMake)
-  become: true
-  apt:
-    name: "{{ item }}"
-    state: latest
+- name: Ensure user ~/bin folder
+  file:
+    path: "{{ ansible_env.HOME }}/bin"
+    state: directory
+    force: yes
+
+- name: Download nightly nvim.appimage
+  get_url:
+    url: "https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage"
+    dest: "{{ ansible_env.HOME }}/bin/nvim"
+    mode: u+rwx
+
+- name: Symlink configuration files
+  file:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "~/.config/nvim/{{ item }}"
+    state: link
+    force: yes
   with_items:
-    - cmake
-    - build-essential
+    - "init.vim"
+    - "plug.vim"
+    - "amir"
 
-- name: Clone Neovim's repository
-  git:
-    depth=1
-    dest="{{ local_repo }}"
-    repo="{{ remote_repo }}"
-    accept_hostkey=yes
+- name: Run nvim installation things
+  shell: "nvim +'PlugInstall --sync' +UpdateRemotePlugins +qa"
 
-- name: Build Neovim
-  make:
-    chdir: "{{ local_repo }}"
-    file: "{{ local_repo }}/Makefile"
+
