@@ -11,6 +11,20 @@
     dest: "{{ ansible_env.HOME }}/bin/nvim"
     mode: u+rwx
 
+- name: Install python2 neovim on a virtualenv
+  pip:
+    virtualenv_python: python2.7
+    virtualenv: "{{ ansible_env.HOME }}/.virtualenvs/neovim-py2"
+    name: "neovim"
+    state: latest
+
+- name: Install python3 neovim on a virtualenv
+  pip:
+    virtualenv_python: python3
+    virtualenv: "{{ ansible_env.HOME }}/.virtualenvs/neovim-py3"
+    name: "neovim"
+    state: latest
+
 - name: Symlink configuration files
   file:
     src: "{{ role_path }}/files/{{ item }}"
