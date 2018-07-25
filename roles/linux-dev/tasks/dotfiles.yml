@@ -22,11 +22,3 @@
     force: yes
   with_items: "{{ custom_path_dot_files }}"
 
-- name: Symlink additional folders
-  file:
-    src: "{{ role_path }}/files/{{ item.name }}"
-    dest: "{{ item.dest }}"
-    state: link
-    force: yes
-  with_items: "{{ folders_to_symlink }}"
-
