@@ -25,6 +25,12 @@
     name: "neovim"
     state: latest
 
+- name: Ensure neovim config folder
+  file:
+    path: "{{ neovim_config_folder }}"
+    state: directory
+    force: yes
+
 - name: Symlink configuration files
   file:
     src: "{{ role_path }}/files/{{ item }}"

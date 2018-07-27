@@ -1,6 +1,6 @@
 ---
 personal_bin_folder: "{{ ansible_env.HOME }}/bin"
 nvim_appimage_url: "https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage"
-python2_host_venv_path: "{{ ansible_env.HOME }}/.virtualenvs/neovim-py2"
-python3_host_venv_path: "{{ ansible_env.HOME }}/.virtualenvs/neovim-py3"
-neovim_config_folder: "{{ ansible_env.HOME }}/.config/nvim/{{ item }}"
+python2_host_venv_path: "{{ ansible_env.HOME }}/.virtualenvs/neovim-py2/"
+python3_host_venv_path: "{{ ansible_env.HOME }}/.virtualenvs/neovim-py3/"
+neovim_config_folder: "{{ ansible_env.HOME }}/.config/nvim/"
