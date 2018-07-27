@@ -11,6 +11,15 @@
     dest: "{{ personal_bin_folder }}/nvim"
     mode: u+rwx
 
+- name: Installed required apt packages
+  become: true
+  apt:
+    name: "{{ item  }}"
+    state: latest
+  with_items:
+    - xclip  # for clipboard support
+    - python-virtualenv  # is this needed?
+
 - name: Install python2 neovim on a virtualenv
   pip:
     virtualenv_python: python2.7
@@ -34,7 +43,7 @@
 - name: Symlink configuration files
   file:
     src: "{{ role_path }}/files/{{ item }}"
-    dest: "{{ neovim_config_folder }}"
+    dest: "{{ neovim_config_folder }}/{{ item }}"
     state: link
     force: yes
   with_items:
