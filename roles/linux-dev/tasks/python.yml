@@ -1,0 +1,20 @@
+---
+- name: Create temporary file for pyenv-installer script
+  tempfile:
+    prefix: ansible.pyenv-installer
+  register: tempfile
+
+
+- name: Download pyenv-installer script
+  get_url:
+    url: "https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer"
+    dest: "{{ tempfile.path }}"
+    force: yes
+
+- name: Execute the pyenv-intaller script
+  shell: "bash {{ tempfile.path }}"
+
+- name: Delete the pyenv-installer script
+  file:
+    state: absent
+    path: "{{ tempfile.path }}"
