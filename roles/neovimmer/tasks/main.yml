@@ -20,6 +20,16 @@
     - xclip  # for clipboard support
     - python-virtualenv  # is this needed?
 
+- name: Ensure pip in Python 2
+  pip:
+    virtualenv_python: python2.7
+    name: "virtualenv"
+
+- name: Ensure pip in Python 3
+  pip:
+    virtualenv_python: python3
+    name: "virtualenv"
+
 - name: Install python2 neovim on a virtualenv
   pip:
     virtualenv_python: python2.7
