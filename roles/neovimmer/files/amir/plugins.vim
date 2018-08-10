@@ -7,7 +7,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
-Plug 'miconda/lucariox.vim'
+" Plug 'miconda/lucariox.vim'
+Plug 'kaicataldo/material.vim'
 Plug 'mxw/vim-jsx'
 Plug 'nightsense/seagrey'
 Plug 'posva/vim-vue'
@@ -19,6 +20,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/dante.vim'
+Plug 'python-mode/python-mode'
 call plug#end()
 
 " clojure python

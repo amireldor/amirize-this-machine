@@ -7,7 +7,7 @@ let g:python3_host_prog = expand('~/.virtualenvs/neovim-py3/bin/python')
 
 set termguicolors
 set t_Co=256
-colorscheme lucariox
+colorscheme material
 
 set number
 set relativenumber
