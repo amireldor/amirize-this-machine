@@ -100,6 +100,8 @@ export EDITOR='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+set APPEND_HISTORY=false
 
 source "$HOME/.bash_aliases"
 source "$HOME/.bash_profile"

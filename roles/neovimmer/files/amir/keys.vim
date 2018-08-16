@@ -29,3 +29,6 @@ nmap <Leader>f :Denite buffer file/rec<CR>
 tnoremap <Esc> <C-\><C-n>
 
 map <Tab> <C-^>
+
+if exists('g:gui_oni')
+endif

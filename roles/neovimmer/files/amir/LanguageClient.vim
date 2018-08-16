@@ -6,10 +6,10 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript.jsx': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ 'typescriptreact': ['javascript-typescript-stdio'],
+    \ 'python': ['~/.pyenv/versions/python-language-server/bin/pyls'],
     \ 'vue': ['vls']
     \ }
 
-    " \ 'python': ['~/.pyenv/versions/pyls/bin/pyls'],  # buggy
 
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
