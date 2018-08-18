@@ -5,6 +5,8 @@ let g:deoplete#enable_at_startup = 1
 let g:python_host_prog = expand('~/.virtualenvs/neovim-py2/bin/python')
 let g:python3_host_prog = expand('~/.virtualenvs/neovim-py3/bin/python')
 
+set mouse=a
+
 set termguicolors
 set t_Co=256
 colorscheme material
