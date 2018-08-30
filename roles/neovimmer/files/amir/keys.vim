@@ -10,6 +10,7 @@ map <Leader>3 :NERDTreeToggle<CR>
 map <Leader>5 :e ~/.config/nvim/init.vim<CR>:cd %:h<CR>
 
 map <Leader>J :%!jq .<CR>:set ft=json<CR>
+map <leader>h :set hls!<cr>
 
 nnoremap <Space> <Nop>
 

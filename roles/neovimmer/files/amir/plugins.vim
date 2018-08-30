@@ -4,7 +4,7 @@ Plug 'BurningEther/iron.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'digitaltoad/vim-pug'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 " Plug 'miconda/lucariox.vim'
