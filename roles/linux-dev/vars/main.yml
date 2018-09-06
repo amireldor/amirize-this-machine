@@ -26,7 +26,9 @@ dot_files:
 
 custom_path_dot_files:
   - name: astro.zsh-theme
-    dest: "$HOME/.oh-my-zsh/themes/astro.zsh-theme"
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/themes/astro.zsh-theme"
+  - name: i3.config
+    dest: "{{ ansible_env.HOME }}/.config/i3/config"
 
 global_npm_packages:
   - yarn
