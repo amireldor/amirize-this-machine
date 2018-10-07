@@ -15,6 +15,7 @@ apt_packages:
   - curl
   - silversearcher-ag
   - git-flow
+  - direnv
 
 dot_files:
   - zshrc

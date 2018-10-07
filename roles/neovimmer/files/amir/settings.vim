@@ -1,4 +1,3 @@
-let g:deoplete#enable_at_startup = 1
 
 " TODO: get these values from Ansible vars - probably need to make this file
 " an Ansible template
@@ -14,6 +13,7 @@ colorscheme material
 set number
 set relativenumber
 set clipboard+=unnamedplus
+set nowrap
 
 call denite#custom#var('file/rec', 'command',
   \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
@@ -29,4 +29,16 @@ call denite#custom#map(
   \ '<denite:move_to_previous_line>',
   \ 'noremap'
   \)
+
+" let g:deoplete#enable_at_startup = 1
+" call deoplete#custom#option('auto_complete_delay', 123)
+
+" " For clojure-vim/async-clj-omni
+" let g:deoplete#keyword_patterns = {}
+" let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
+
+
+" ncm2
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 

@@ -116,3 +116,4 @@ export PATH="/home/amir/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+eval "$(direnv hook zsh)"
