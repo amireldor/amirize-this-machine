@@ -16,6 +16,8 @@ apt_packages:
   - silversearcher-ag
   - git-flow
   - direnv
+  - i3
+  - rofi
 
 dot_files:
   - zshrc
