@@ -19,7 +19,7 @@
     name: "{{ item }}"
     state: latest
   with_items: "{{ pacman_packages }}"
-  when: ansible_distribution == "Archlinux"
+  when: ansible_os_family == "Archlinux"
 
 - include_tasks: zsh.yml
 - include_tasks: shell.yml
