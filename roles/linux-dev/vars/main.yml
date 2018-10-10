@@ -36,7 +36,7 @@ pacman_packages:
   #- silversearcher-ag
   #- git-flow
   #- direnv
-  - i3
+  - i3-gaps
   - feh
   - rofi
 
