@@ -117,3 +117,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 eval "$(direnv hook zsh)"
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
