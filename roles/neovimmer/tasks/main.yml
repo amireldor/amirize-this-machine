@@ -19,6 +19,17 @@
   with_items:
     - xclip  # for clipboard support
     - python-virtualenv  # is this needed?
+  when: ansible_os_family == "Debian"
+
+- name: Installed required apt packages
+  become: true
+  apt:
+    name: "{{ item  }}"
+    state: latest
+  with_items:
+    - xclip  # for clipboard support
+    - python-virtualenv  # is this needed?
+  when: ansible_os_family == "Archlinux"
 
 - name: Ensure pip in Python 2
   pip:

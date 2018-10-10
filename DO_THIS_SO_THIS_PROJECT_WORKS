@@ -1,5 +1,2 @@
- - neovimmer, need to compile from source, no apt package
-   - or: use nvim.appimage from somewhere, that's cool enough
- - [started, wip] IMPORTANT: clone yourself and start working from there (initial boot is download-zip from github, no repo)
  - Make different roles, like this "neovimmer" I'm trying to create
 
