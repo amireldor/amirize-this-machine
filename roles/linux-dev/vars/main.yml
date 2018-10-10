@@ -33,9 +33,9 @@ pacman_packages:
   - thefuck
   - tmux
   - curl
-  - silversearcher-ag
-  - git-flow
-  - direnv
+  #- silversearcher-ag
+  #- git-flow
+  #- direnv
   - i3
   - feh
   - rofi

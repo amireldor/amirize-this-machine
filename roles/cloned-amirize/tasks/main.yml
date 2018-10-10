@@ -1,5 +1,5 @@
 ---
-- name: Ensure git
+- name: Ensure git, Debian family
   become: true
   apt:
     install_recommends: no
@@ -8,10 +8,9 @@
     state: latest
   when: ansible_os_family == "Debian"
 
-- name: Ensure git
+- name: Ensure git, Arch family
   become: true
   pacman:
-    install_recommends: no
     update_cache: yes
     name: "git"
     state: latest
