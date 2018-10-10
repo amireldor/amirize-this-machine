@@ -1,13 +1,21 @@
 ---
-- name: Installing your favorite packages
+- name: Installing your favorite packages, Debian family
   become: true
   apt:
     install_recommends: no
     update_cache: yes
     cache_valid_time: 3600
-    name: "{{ item }}"
+    name: "{{ apt_packages }}"
     state: latest
-  with_items: "{{ apt_packages }}"
+  when: ansible_os_family == "Debian"
+
+- name: Installing your favorite packages, Arch family
+  become: true
+  pacman:
+    update_cache: yes
+    name: "{{ pacman_packages }}"
+    state: latest
+  when: ansible_os_family == "Archlinux"
 
 - include_tasks: zsh.yml
 - include_tasks: shell.yml

@@ -11,14 +11,19 @@
     dest: "{{ personal_bin_folder }}/nvim"
     mode: u+rwx
 
-- name: Installed required apt packages
+- name: Installed required packages, Debian family
   become: true
   apt:
-    name: "{{ item  }}"
+    name: xclip
     state: latest
-  with_items:
-    - xclip  # for clipboard support
-    - python-virtualenv  # is this needed?
+  when: ansible_os_family == "Debian"
+
+- name: Installed required packages, Arch family
+  become: true
+  pacman:
+    name: xclip
+    state: latest
+  when: ansible_os_family == "Archlinux"
 
 - name: Ensure pip in Python 2
   pip:
