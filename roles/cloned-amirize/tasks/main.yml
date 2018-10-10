@@ -6,6 +6,16 @@
     update_cache: yes
     name: "git"
     state: latest
+  when: ansible_os_family == "Debian"
+
+- name: Ensure git
+  become: true
+  pacman:
+    install_recommends: no
+    update_cache: yes
+    name: "git"
+    state: latest
+  when: ansible_os_family == "Archlinux"
 
 - name: Check SSH key existence
   register: ssh_key_file
