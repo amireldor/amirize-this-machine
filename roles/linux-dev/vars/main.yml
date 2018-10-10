@@ -1,4 +1,5 @@
 ---
+# TODO: extract common packages to `common_packages`, concatenate in tasks/main.yml
 apt_packages:
   - git
   - tig
@@ -7,6 +8,25 @@ apt_packages:
   - tree
   - npm
   - gnome-tweak-tool
+  - trash-cli
+  - meld
+  - python-virtualenv
+  - thefuck
+  - tmux
+  - curl
+  - silversearcher-ag
+  - git-flow
+  - direnv
+  - i3
+  - feh
+  - rofi
+
+pacman_packages:
+  - git
+  - tig
+  - zsh
+  - tree
+  - npm
   - trash-cli
   - meld
   - python-virtualenv
