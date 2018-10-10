@@ -17,6 +17,7 @@ apt_packages:
   - git-flow
   - direnv
   - i3
+  - feh
   - rofi
 
 dot_files:
