@@ -1,6 +1,13 @@
 # more shell extensions/utils
 
 ---
+
+- name: Add ~/bin to PATH
+  lineinfile:
+    path: "{{ ansible_env.HOME }}/.bashrc"
+    line: 'export PATH="$HOME/bin:S$PATH"'
+
+
 - name: Install fzf from git (fuzzy search)
   git:
     dest: ~/.fzf
