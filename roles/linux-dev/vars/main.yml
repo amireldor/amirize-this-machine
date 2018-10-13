@@ -18,9 +18,11 @@ apt_packages:
   - git-flow
   - direnv
   - i3
+  - i3status
   - feh
   - rofi
   - redshift-gtk
+  - htop
 
 pacman_packages:
   - git
@@ -40,6 +42,7 @@ pacman_packages:
   - i3-gaps
   - feh
   - rofi
+  - htop
 
 dot_files:
   - zshrc
