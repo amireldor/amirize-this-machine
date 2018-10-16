@@ -51,6 +51,7 @@ dot_files:
   - tmux.conf
   - bash_profile
   - gitconfig
+  - gitignore_global
 
 custom_path_dot_files:
   - name: astro.zsh-theme
