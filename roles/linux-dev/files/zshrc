@@ -123,3 +123,4 @@ eval "$(direnv hook zsh)"
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
+source <(doctl completion zsh)
