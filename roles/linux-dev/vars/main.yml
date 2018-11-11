@@ -61,4 +61,4 @@ custom_path_dot_files:
 
 global_npm_packages:
   - yarn
-
+  - flow-bin
