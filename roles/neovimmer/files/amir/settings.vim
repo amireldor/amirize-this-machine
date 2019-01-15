@@ -30,15 +30,21 @@ call denite#custom#map(
   \ 'noremap'
   \)
 
-" let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 " call deoplete#custom#option('auto_complete_delay', 123)
 
 " " For clojure-vim/async-clj-omni
 " let g:deoplete#keyword_patterns = {}
 " let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
 
+" OCaml (merlin)
+" if executable('ocamlmerlin') && has('python')
+"   let s:ocamlmerlin = substitute(system('opam config var share'), '\n$', '', '''') . "/merlin"
+"   execute "set rtp+=".s:ocamlmerlin."/vim"
+"   execute "set rtp+=".s:ocamlmerlin."/vimbufsync"
+" endif
+" autocmd FileType ocaml execute "set rtp+=" . substitute(system('opam config var share'), '\n$', '', '''') . "/ocp-indent/vim/indent/ocaml.vim"
 
-" ncm2
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
-
+" OCaml (merlin) (2nd attempt)
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"

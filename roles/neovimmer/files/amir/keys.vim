@@ -1,4 +1,6 @@
 let mapleader = " "
+nmap k gk
+nmap j gj
 
 map <F3> :NERDTreeToggle<CR>
 map <F5> :tabnew<CR>:tcd ~/.config/nvim<CR>:e init.vim<CR>
@@ -28,6 +30,7 @@ nmap <C-f> :Denite buffer file/rec<CR>
 nmap <Leader>f :Denite buffer file/rec<CR>
 
 tnoremap <Esc> <C-\><C-n>
+tnoremap jh <C-\><C-n>
 
 map <Tab> <C-^>
 

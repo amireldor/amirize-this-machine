@@ -15,7 +15,7 @@ Plug 'posva/vim-vue'
 Plug 'ryym/vim-riot'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
@@ -30,22 +30,9 @@ Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
 
 Plug 'dhruvasagar/vim-table-mode'
 
-" Plug 'prabirshrestha/asyncomplete.vim'
-" Plug 'prabirshrestha/async.vim'
-" Plug 'prabirshrestha/vim-lsp'
-" Plug 'prabirshrestha/asyncomplete-lsp.vim'
-" Plug 'yami-beta/asyncomplete-omni.vim'
+Plug 'copy/deoplete-ocaml'   " deoplete OCaml (merlin)
 
 
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-cssomni'
-" Plug 'ncm2/ncm2-tern'
-" Plug 'mhartington/nvim-typescript'
-Plug 'ncm2/ncm2-html-subscope'
-Plug 'ncm2/ncm2-vim-lsp'
 call plug#end()
 
 " clojure python
