@@ -9,6 +9,7 @@
 	co = checkout
 	s = status
 	dc = diff --cached
+	dt = difftool
 	l = log
 	fl = flow
 

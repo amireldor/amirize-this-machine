@@ -29,6 +29,7 @@ Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'copy/deoplete-ocaml'   " deoplete OCaml (merlin)
 Plug 'calviken/vim-gdscript3'  " Godot game engine scripting
+Plug 'vim-syntastic/syntastic' " Syntastic
 call plug#end()
 
 " clojure python

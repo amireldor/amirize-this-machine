@@ -20,6 +20,7 @@ set number
 set relativenumber
 set clipboard+=unnamedplus
 set nowrap
+set wildmode=list:longest,full
 
 call denite#custom#var('file/rec', 'command',
   \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
@@ -44,17 +45,21 @@ let g:deoplete#enable_at_startup = 1
 " let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
 
 " OCaml (merlin)
-" if executable('ocamlmerlin') && has('python')
-"   let s:ocamlmerlin = substitute(system('opam config var share'), '\n$', '', '''') . "/merlin"
-"   execute "set rtp+=".s:ocamlmerlin."/vim"
-"   execute "set rtp+=".s:ocamlmerlin."/vimbufsync"
-" endif
-" autocmd FileType ocaml execute "set rtp+=" . substitute(system('opam config var share'), '\n$', '', '''') . "/ocp-indent/vim/indent/ocaml.vim"
-
-" OCaml (merlin) (2nd attempt)
 if has("win32")
   " TODO: setup merlin on windows
 else
   let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
   execute "set rtp+=" . g:opamshare . "/merlin/vim"
 end
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_ocaml_checkers = ['merlin']
