@@ -1,8 +1,14 @@
 
 " TODO: get these values from Ansible vars - probably need to make this file
 " an Ansible template
-let g:python_host_prog = expand('~/.virtualenvs/neovim-py2/bin/python')
-let g:python3_host_prog = expand('~/.virtualenvs/neovim-py3/bin/python')
+
+if has("win32")
+  let g:python_host_prog = expand('c:/python27/python.exe')
+  let g:python3_host_prog = expand('c:/python36/python.exe')
+else
+  let g:python_host_prog = expand('~/.virtualenvs/neovim-py2/bin/python')
+  let g:python3_host_prog = expand('~/.virtualenvs/neovim-py3/bin/python')
+endif
 
 set mouse=a
 
@@ -46,5 +52,9 @@ let g:deoplete#enable_at_startup = 1
 " autocmd FileType ocaml execute "set rtp+=" . substitute(system('opam config var share'), '\n$', '', '''') . "/ocp-indent/vim/indent/ocaml.vim"
 
 " OCaml (merlin) (2nd attempt)
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
+if has("win32")
+  " TODO: setup merlin on windows
+else
+  let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+  execute "set rtp+=" . g:opamshare . "/merlin/vim"
+end

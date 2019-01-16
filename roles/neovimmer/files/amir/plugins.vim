@@ -23,16 +23,12 @@ Plug 'vim-scripts/dante.vim'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 " Plug 'sbdchd/neoformat'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
-Plug 'clojure-vim/acid.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'clojure-vim/acid.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'clojure-vim/async-clj-omni'
 Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
-
 Plug 'dhruvasagar/vim-table-mode'
-
 Plug 'copy/deoplete-ocaml'   " deoplete OCaml (merlin)
-
-
+Plug 'calviken/vim-gdscript3'  " Godot game engine scripting
 call plug#end()
 
 " clojure python

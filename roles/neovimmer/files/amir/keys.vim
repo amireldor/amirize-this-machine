@@ -3,7 +3,7 @@ nmap k gk
 nmap j gj
 
 map <F3> :NERDTreeToggle<CR>
-map <F5> :tabnew<CR>:tcd ~/.config/nvim<CR>:e init.vim<CR>
+map <F5> :tabnew<CR>:execute 'tcd' stdpath("config")<CR>:e init.vim<CR>
 
 map <Leader>d :cd %:h<CR>:pwd<CR>
 map <Leader>w :w<CR>
