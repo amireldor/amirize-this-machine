@@ -17,4 +17,14 @@
 	default = simple
 
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore
+[cola]
+	spellcheck = false
+	linebreak = false
+
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"

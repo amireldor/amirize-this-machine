@@ -17,7 +17,7 @@ set t_Co=256
 colorscheme material
 
 set number
-set relativenumber
+" set relativenumber
 set clipboard+=unnamedplus
 set nowrap
 set wildmode=list:longest,full
