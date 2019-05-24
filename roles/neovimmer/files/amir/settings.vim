@@ -45,12 +45,12 @@ let g:deoplete#enable_at_startup = 1
 " let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
 
 " OCaml (merlin)
-if has("win32")
-  " TODO: setup merlin on windows
-else
-  let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-  execute "set rtp+=" . g:opamshare . "/merlin/vim"
-end
+" if has("win32")
+"   " TODO: setup merlin on windows
+" else
+"   let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+"   execute "set rtp+=" . g:opamshare . "/merlin/vim"
+" end
 
 " Syntastic
 set statusline+=%#warningmsg#
