@@ -66,6 +66,8 @@
     - "autoload"
     - "amir"
 
+- include: js-ts-langserver.yml
+
 - name: Run nvim installation things
   shell: "{{ personal_bin_folder }}/nvim +'PlugInstall --sync' +UpdateRemotePlugins +qa"
 

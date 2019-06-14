@@ -3,11 +3,11 @@ set hidden
 
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['javascript-typescript-stdio'],
-    \ 'typescript': ['javascript-typescript-stdio'],
-    \ 'typescriptreact': ['javascript-typescript-stdio'],
-    \ 'python': ['~/.pyenv/versions/python-language-server/bin/pyls'],
+    \ 'javascript.jsx': ['node', '~/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'typescriptreact': ['node', '~/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'javascript': ['node', '~/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'typescript': ['node', '~/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
+    \ 'python': ['~/.pyenv/versions/python-language-server/bin/pyls']0
     \ 'vue': ['vls']
     \ }
 

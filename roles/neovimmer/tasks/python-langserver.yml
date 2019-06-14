@@ -1,0 +1,7 @@
+---
+- name: "Install python-language-server package"
+
+- name: "npm install for the js/ts lang server"
+
+- name: "Build js/ts langserver"
+
