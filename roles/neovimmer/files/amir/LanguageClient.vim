@@ -7,8 +7,7 @@ let g:LanguageClient_serverCommands = {
     \ 'typescriptreact': ['node', '~/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
     \ 'javascript': ['node', '~/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
     \ 'typescript': ['node', '~/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
-    \ 'python': ['~/.pyenv/versions/python-language-server/bin/pyls']0
-    \ 'vue': ['vls']
+    \ 'python': ['~/.virtualenvs/neovim-py3/bin/pyls'],
     \ }
 
 

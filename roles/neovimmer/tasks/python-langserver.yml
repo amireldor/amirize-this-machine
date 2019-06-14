@@ -1,7 +1,8 @@
 ---
 - name: "Install python-language-server package"
-
-- name: "npm install for the js/ts lang server"
-
-- name: "Build js/ts langserver"
+  pip:
+    virtualenv_python: python3
+    virtualenv: "{{ python3_host_venv_path }}"
+    name: python-language-server[all]
+    state: latest
 
