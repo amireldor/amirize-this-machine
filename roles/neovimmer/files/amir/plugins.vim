@@ -30,8 +30,12 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'copy/deoplete-ocaml'   " deoplete OCaml (merlin)
 Plug 'calviken/vim-gdscript3'  " Godot game engine scripting
 Plug 'vim-syntastic/syntastic' " Syntastic
-call plug#end()
+Plug 'vim-airline/vim-airline'
+Plug 'mbbill/undotree'
+Plug 'vim-scripts/mru.vim'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
-" clojure python
-" typescript lsp
-" https://github.com/autozimu/LanguageClient-neovim
+call plug#end()
