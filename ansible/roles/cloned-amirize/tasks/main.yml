@@ -16,6 +16,14 @@
     state: latest
   when: ansible_os_family == "Archlinux"
 
+- name: Ensure git, SUSE family
+  become: true
+  zypper:
+    update_cache: yes
+    name: "git"
+    state: latest
+  when: ansible_os_family == "Suse"
+
 - name: Check SSH key existence
   register: ssh_key_file
   stat:

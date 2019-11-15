@@ -3,7 +3,8 @@
 set -e
 export ANSIBLE_VENV="temp_ansible_venv"
 
-sudo apt install python3-venv
+# sudo apt install python3-venv
+sudo zypper install python3-virtualenv
 
 python3 -m venv "$ANSIBLE_VENV"
 

@@ -44,6 +44,27 @@ pacman_packages:
   - rofi
   - htop
 
+suse_packages:
+  - git
+  - tig
+    #  - build-essential
+  - zsh
+  - tree
+  - npm
+    #  - gnome-tweak-tool
+    #  - trash-cli
+  - meld
+  - python-virtualenv
+    #  - thefuck
+  - tmux
+  - curl
+    #  - silversearcher-ag
+    #  - git-flow
+  - direnv
+  - i3
+  - i3status
+  - htop
+
 dot_files:
   - zshrc
   - bash_aliases

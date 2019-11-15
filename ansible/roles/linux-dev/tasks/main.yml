@@ -17,6 +17,14 @@
     state: latest
   when: ansible_os_family == "Archlinux"
 
+- name: Installing your favorite packages, SUSE family
+  become: true
+  zypper:
+    update_cache: yes
+    name: "{{ suse_packages }}"
+    state: latest
+  when: ansible_os_family == "Suse"
+
 - include_tasks: dotfiles.yml
 - include_tasks: zsh.yml
 - include_tasks: shell.yml

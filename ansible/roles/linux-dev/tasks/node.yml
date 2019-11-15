@@ -8,11 +8,11 @@
 
 - name: Install latest node using n
   become: true
-  shell: "n latest"
+  shell: "/usr/local/bin/n latest"
 
 - name: Install stable node using n
   become: true
-  shell: "n stable"
+  shell: "/usr/local/bin/n stable"
 
 - name: Global npm packages
   npm:
