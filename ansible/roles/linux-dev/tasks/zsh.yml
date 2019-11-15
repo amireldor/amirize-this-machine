@@ -1,0 +1,17 @@
+---
+- name: Save zsh path
+  register: which_zsh
+  shell: "which zsh"
+
+- name: Set zsh as user's shell
+  become: true
+  user:
+    name: "{{ ansible_env.USER }}"
+    shell: "{{ which_zsh.stdout }}"
+
+- name: Install oh-my-zsh
+  git:
+    dest: "~/.oh-my-zsh"
+    repo: "git://github.com/robbyrussell/oh-my-zsh.git"
+    depth: 1
+

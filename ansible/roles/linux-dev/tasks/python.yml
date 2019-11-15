@@ -1,0 +1,8 @@
+---
+- name: Check if .pyenv exists
+  stat:
+    path: "{{ ansible_env.HOME }}/.pyenv"
+  register: pyenv_folder
+
+- include_tasks: pyenv-installer.yml
+  when: not pyenv_folder.stat.exists
