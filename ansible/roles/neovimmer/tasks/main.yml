@@ -49,27 +49,16 @@
     name: "neovim"
     state: latest
 
-- name: Ensure neovim config folder
-  file:
-    path: "{{ neovim_config_folder }}"
-    state: directory
-    force: yes
+- name: Check if the neovim bankruptcy repository exists
+  stat:
+    path: "~/.config/nvim"
+  register: amir_neovim_repo
 
-- name: Symlink configuration files
-  file:
-    src: "{{ role_path }}/files/{{ item }}"
-    dest: "{{ neovim_config_folder }}/{{ item }}"
-    state: link
-    force: yes
-  with_items:
-    - "init.vim"
-    - "autoload"
-    - "amir"
+- name: Clone the neovim bankruptcy repository
+  git:
+    dest: "~/.config/nvim"
+    repo: "git@github.com:amireldor/neovim-bankruptcy.git"
+  when: not amir_neovim_repo.stat.exists
 
-- include: js-ts-langserver.yml
-- include: python-langserver.yml
-
-- name: Run nvim installation things
-  shell: "{{ personal_bin_folder }}/nvim +'PlugInstall --sync' +UpdateRemotePlugins +qa"
-
-
+- name: run nvim installation things
+  shell: "{{ personal_bin_folder }}/nvim +'pluginstall --sync' +updateremoteplugins +qa"

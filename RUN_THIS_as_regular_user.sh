@@ -19,9 +19,12 @@ echo "running preparations..."
 source "$ANSIBLE_VENV/bin/activate"
 pip install ansible
 
+cd ansible
+
 echo "phase 1 - preparing local repo"
 ./_playbook_phase_1.sh
 
 echo "phase 2 - continue running playbook from locally cloned repo"
 cd $HOME/.amirize-this-machine
+cd ansible
 ./_playbook_phase_2.sh

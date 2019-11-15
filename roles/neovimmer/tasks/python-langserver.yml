@@ -1,8 +1,0 @@
----
-- name: "Install python-language-server package"
-  pip:
-    virtualenv_python: python3
-    virtualenv: "{{ python3_host_venv_path }}"
-    name: python-language-server[all]
-    state: latest
-
