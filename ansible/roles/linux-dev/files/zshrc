@@ -63,7 +63,7 @@ plugins=(
   git
   git-flow
   z
-  thefuck
+  #thefuck
   python
   pyenv
   pylint
@@ -111,7 +111,9 @@ source "$HOME/.bash_profile"
 
 # export PATH="$HOME/.npm-packages/bin:$PATH"
 
-eval $(thefuck --alias)
+if [ -x "$(command -v thefuck)" ]; then
+  eval $(thefuck --alias)
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
